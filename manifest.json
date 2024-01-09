@@ -1,10 +1,23 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions of the wolrd!",
-    "description": "Base Level Extension",
+    "name": "Ghibli New Tab",
     "version": "1.0",
+    "description": "Extension to custom your newtab",
+    "chrome_url_overrides" :  {
+      "newtab": "index.html"
+    },
+    "icons": {
+        "16": "ghibli_icon16.png",
+        "32": "ghibli_icon32.png",
+        "48": "ghibli_icon48.png",
+        "128": "ghibli_icon128.png"
+    },
+
     "action": {
-      "default_popup": "hello.html",
-      "default_icon": "hello_extensions.png"
-    }
+      "default_title" : "Ghilbi New Tab",
+      "default_popup": "popup.html",
+      "default_icon":"ghibli_icon16.png"
+    }    
   }
+
+
