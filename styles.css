@@ -19,19 +19,64 @@
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
+}
 
+.clock{
+    width: 100px;
+    height: 100px;
+    background: rgba(86, 81, 83, 0.159);
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 8; /* Valeur plus élevée pour être au premier plan */
+    justify-content: center;
+    backdrop-filter: blur(100px);
+    left: 20px; /* Ajustez la position par rapport à gauche */
+    top: 200px; /* Ajustez la position par rapport au haut */
+
+}
+
+.clock span{
+    font-size:13px;
+    width : 10px;
+    display : inline-block;
+    text-align: center;
+    position: relative;
+} 
+
+.clock span::after{
+    font-size: 5px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform : translateX(-50%);
+}
+
+#hrs::after{
+    content: 'HOURS';
+}
+
+#min::after{
+    content: 'MINS';
+}
+
+#sec::after{
+    content: 'SEC';
 }
 
 .calendar {
     width: 150px;
     height: 150px;
-    background: #ffffff7e;
+    background: #ffffff2b;
     color: #ffffff;
     display: flex;
     align-items: center;
     border-radius: 10px;
     z-index: 10; /* Valeur plus élevée pour être au premier plan */
     position: absolute;
+    backdrop-filter: blur(100px);
     left: 20px; /* Ajustez la position par rapport à gauche */
     top: 20px; /* Ajustez la position par rapport au haut */
 }
@@ -43,11 +88,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .right{
-    width: 42%;
+    width: 50%;
     background: rgba(5, 5, 5, 0.57);
     color: #ffffff;
     border-top-right-radius: 10px;
@@ -55,7 +100,7 @@
 }
 
 .left{
-    width: 58%;
+    width: 50%;
 }
 .container h1{
     position: absolute;
@@ -67,6 +112,7 @@
     font-weight: 600;
     letter-spacing: 3px;
 }
+
 
 .quotes{
     width: 100%;
@@ -84,7 +130,6 @@
     font-weight: 500;
     font-style: italic;
 }
-
 
 /* Style de la barre de recherche */
 #search {
