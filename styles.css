@@ -16,9 +16,47 @@
 }
 
 .container img {
-    width : 75%;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+
 }
 
+.calendar {
+    width: 150px;
+    height: 150px;
+    background: #ffffff7e;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 10; /* Valeur plus élevée pour être au premier plan */
+    position: absolute;
+    left: 20px; /* Ajustez la position par rapport à gauche */
+    top: 20px; /* Ajustez la position par rapport au haut */
+}
+
+.left, .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.right{
+    width: 42%;
+    background: rgba(5, 5, 5, 0.57);
+    color: #ffffff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left{
+    width: 58%;
+}
 .container h1{
     position: absolute;
     top: 50%;
@@ -41,22 +79,48 @@
 }
 
 .quotes h2{
-    font-size: 45px;
+    font-size: 30px;
     margin-top: 10px;
     font-weight: 500;
+    font-style: italic;
 }
 
-.date {
-    display: flex;
+
+/* Style de la barre de recherche */
+#search {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
+    width: 80%; /* Largeur ajustée */
+    max-width: 400px; /* Largeur maximale */
+}
+
+input[type="text"] {
+    width: calc(100% - 80px); /* Largeur ajustée pour l'input */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    font-size: 14px; /* Taille de police réduite */
+}
+
+input[type="text"]:focus {
+    border-color: #2c2a2c; /* Couleur lorsque l'input est focus */
+}
+
+input[type="submit"] {
+    background-color: #252323;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 430px;
-    margin-bottom: auto;
-    margin-left: 550px;
-    border: solid;
-    font-size: xx-large;
+    border: none;
+    padding: 8px 12px; /* Taille du bouton ajustée */
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px; /* Taille de police réduite */
+    margin-left: 6px; /* Ajustement pour l'espacement entre l'input et le bouton */
+}
+
+input[type="submit"]:hover {
+    background-color: #00000071; /* Couleur au survol */
 }
