@@ -1,28 +1,24 @@
-body {
-    cursor: url('image-path.png'),auto;
-  }
-
 *{
-    margin: 0;
+    margin: 0px;
     padding: 0;
     font-family: "poppins", sans-serif;
     box-sizing: border-box;
 }    
 
-.container{
+#container{
     width: 100%;
     height: 100vh;
-    background: url('https://www.ghibli.jp/gallery/chihiro008.jpg');
+    background-color: rgb(0, 0, 0);
     position: relative;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .clock{
     width: 100px;
     height: 80px;
-    background: rgba(86, 81, 83, 0.159);
+    background: rgba(86, 81, 83, 0.095);
     color: white;
     display: flex;
     align-items: center;
@@ -30,7 +26,7 @@ body {
     position: absolute;
     z-index: 8; /* Valeur plus élevée pour être au premier plan */
     justify-content: center;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(50px);
     left: 20px; /* Ajustez la position par rapport à gauche */
     top: 220px; /* Ajustez la position par rapport au haut */
 
@@ -74,7 +70,7 @@ body {
     border-radius: 10px;
     z-index: 9; /* Valeur plus élevée pour être au premier plan */
     position: absolute;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(50px);
     left: 20px; /* Ajustez la position par rapport à gauche */
     top: 100px; /* Ajustez la position par rapport au haut */
 }
@@ -91,7 +87,7 @@ body {
 
 .right{
     width: 50%;
-    background: rgba(5, 5, 5, 0.57);
+    background: rgba(5, 5, 5, 0.356);
     color: #ffffff;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -145,8 +141,9 @@ body {
 }
 
 input[type="text"] {
-    width: calc(100% - 80px); /* Largeur ajustée pour l'input */
+    width: calc(50%); /* Largeur ajustée pour l'input */
     padding: 8px;
+    background-color: rgba(69, 57, 57, 0.473);
     border: 1px solid #ccc;
     border-radius: 3px;
     outline: none;
@@ -154,7 +151,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    border-color: #2c2a2c; /* Couleur lorsque l'input est focus */
+    border-color: #7f7a7f; /* Couleur lorsque l'input est focus */
 }
 
 input[type="submit"] {
@@ -170,4 +167,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #00000071; /* Couleur au survol */
+}
+
+.inline-form{
+    display: inline-block;
 }
