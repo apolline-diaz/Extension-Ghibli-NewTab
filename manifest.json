@@ -17,7 +17,10 @@
       "default_title" : "Ghilbi New Tab",
       "default_popup": "popup.html",
       "default_icon":"ghibli_icon16.png"
-    }    
+    }, 
+    "permissions" : [
+      "storage"
+    ]   
   }
 
 

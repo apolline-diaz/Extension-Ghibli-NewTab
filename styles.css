@@ -1,19 +1,13 @@
+body {
+    cursor: url('image-path.png'),auto;
+  }
+
 *{
     margin: 0;
     padding: 0;
     font-family: "poppins", sans-serif;
     box-sizing: border-box;
 }    
-
-/*.container {
-    width: 100%;
-    height: 100vh;
-    background: #ffe3e3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}*/
 
 .container{
     width: 100%;
@@ -27,7 +21,7 @@
 
 .clock{
     width: 100px;
-    height: 100px;
+    height: 80px;
     background: rgba(86, 81, 83, 0.159);
     color: white;
     display: flex;
@@ -38,7 +32,7 @@
     justify-content: center;
     backdrop-filter: blur(100px);
     left: 20px; /* Ajustez la position par rapport à gauche */
-    top: 200px; /* Ajustez la position par rapport au haut */
+    top: 220px; /* Ajustez la position par rapport au haut */
 
 }
 
@@ -72,17 +66,17 @@
 
 .calendar {
     width: 150px;
-    height: 150px;
+    height: 100px;
     background: #ffffff2b;
     color: #ffffff;
     display: flex;
     align-items: center;
     border-radius: 10px;
-    z-index: 10; /* Valeur plus élevée pour être au premier plan */
+    z-index: 9; /* Valeur plus élevée pour être au premier plan */
     position: absolute;
     backdrop-filter: blur(100px);
     left: 20px; /* Ajustez la position par rapport à gauche */
-    top: 20px; /* Ajustez la position par rapport au haut */
+    top: 100px; /* Ajustez la position par rapport au haut */
 }
 
 .left, .right{
@@ -121,18 +115,20 @@
 .quotes{
     width: 100%;
     position: absolute;
-    text-align: center;
-    bottom: 15%;
+    text-align: right;
+    bottom: 40px;
+    right: 20px;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
+
 }
 
 .quotes h2{
-    font-size: 30px;
+    font-size: 12px;
     margin-top: 10px;
-    font-weight: 500;
-    font-style: italic;
+    font-weight: 100;
+    font-style : italic;
 }
 
 /* Style de la barre de recherche */
@@ -144,6 +140,8 @@
     text-align: center;
     width: 80%; /* Largeur ajustée */
     max-width: 400px; /* Largeur maximale */
+    z-index: 10; /* Valeur plus élevée pour être au premier plan */
+
 }
 
 input[type="text"] {
