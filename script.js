@@ -1,4 +1,6 @@
 // Actualisation fond d'écran
+let nombrePrecedent = null;
+let nouveauNombre = null;
 
 function changeimg() {
 
@@ -7,14 +9,27 @@ function changeimg() {
         "ged014.jpg",
         "karigurashi018.jpg",
         "kokurikozaka049.jpg",
-        "ponyo032.jpg"
+        "ponyo032.jpg",
     ];
+
     
-    const randomIndex = Math.floor(Math.random() * images.length);    
-    document.getElementById("container").style.backgroundImage = `url('images/${images[randomIndex]}')`;
-}
+
+    do  {
+        nouveauNombre = Math.floor(Math.random() * images.length);
+        } while (nouveauNombre === nombrePrecedent);
+        
+        console.log(nombrePrecedent);
+        console.log(nouveauNombre);
+        
+        nombrePrecedent = nouveauNombre;
+        
+        // const randomIndex = Math.floor(Math.random() * images.length);    
+        document.getElementById("container").style.backgroundImage = `url('images/${images[nouveauNombre]}')`;
+
+    }
 
 document.addEventListener("DOMContentLoaded", changeimg);
+document.getElementById("changeBackground").addEventListener("click", changeimg);
 
 
 

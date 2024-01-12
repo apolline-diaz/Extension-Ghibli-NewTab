@@ -1,5 +1,5 @@
 *{
-    margin: 0px;
+    margin: 0;
     padding: 0;
     font-family: "poppins", sans-serif;
     box-sizing: border-box;
@@ -29,7 +29,7 @@
     backdrop-filter: blur(50px);
     left: 20px; /* Ajustez la position par rapport à gauche */
     top: 220px; /* Ajustez la position par rapport au haut */
-
+    
 }
 
 .clock span{
@@ -117,7 +117,7 @@
     color: #fff;
     font-size: 16px;
     font-weight: 500;
-
+    
 }
 
 .quotes h2{
@@ -137,7 +137,7 @@
     width: 80%; /* Largeur ajustée */
     max-width: 400px; /* Largeur maximale */
     z-index: 10; /* Valeur plus élevée pour être au premier plan */
-
+    
 }
 
 input[type="text"] {
@@ -171,4 +171,33 @@ input[type="submit"]:hover {
 
 .inline-form{
     display: inline-block;
+}
+
+#changeBackground {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    /* border: 1px solid #000; */
+    color: #ffffff; /* Couleur du texte */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+figure {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 10px;
+    max-width: 1000px;
+}
+
+audio {
+    width: 275%;
 }
