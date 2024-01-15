@@ -9,11 +9,15 @@
 
     </head>
     <body>
+
+    <!--Fond d'écran-->
         
         <section>
             <div id="container">
             </div>
         </section>
+
+    <!--Musique-->
 
         <figure>
             <audio controls><source src="/musiques/Joe Hisaishi  Studio Ghibli Experience, Part 1.mp3" type="audio/mp3">
@@ -22,36 +26,83 @@
         </figure>
         
         <button id="changeBackground">Change the Background</button>
+    
+    <!--Citation-->
+
         
         <div class="quotes">
             <p>Commence par finir ce que tu commences.</p>
-            <h2>Spirited Away</h2>
+            <h1>Spirited Away</h1>
+            <h2>2001</h2>
         </div>
+
+    <!--Recherche Google-->
+
         
-        <div id="search">
-            <form class="inline-form" method="get" action="https://www.google.com/search?q=" target="_blank">
-                <input type="text" name="q" size="25" maxlength="255" placeholder="Search Google">
-                <input type="submit" value="Search">
-            </form>
-        </div>
+    <div id="search">
+        <form class="inline-form" method="get" action="https://www.google.com/search?q=" target="_blank">
+            <input type="text" name="q" size="25" maxlength="255" placeholder="Search Google">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <!--Fuseau horaire-->
         
-        <div class="clock">
-            <span id="hrs">00</span>
-            <span> : </span>
-            <span id="min">00</span>
-            <span> : </span>
-            <span id="sec">00</span>
-        </div>
-        <div class="calendar">
-            <div class="left">
-                <p id="date">01</p>
-                <p id="day">Sunday</p>
-        </div>
+    <div class="clock">
+        <span id="hrs">00</span>
+        <span> : </span>
+        <span id="min">00</span>
+        <span> : </span>
+        <span id="sec">00</span>
+    </div>
+
+    <!--Calendrier-->
+    
+    <div class="calendar">
+        <div class="left">
+        <p id="date">01</p>
+        <p id="day">Sunday</p>
+    </div>
         <div class="right">
             <p id="month">January</p>
             <p id="year">2024</p>
         </div>
+    </div>
 
+    <!--Météo-->
+
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="images/search.png"></button>
+    
+        </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+    
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">22°c</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+            <div class="col">
+                <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 

@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     font-family: "poppins", sans-serif;
-    box-sizing: border-box;
-}    
+}
 
-#container{
+/* Style du conteneur principal */
+#container {
     width: 100%;
     height: 100vh;
     background-color: rgb(0, 0, 0);
@@ -15,7 +15,8 @@
     background-repeat: no-repeat;
 }
 
-.clock{
+/* Style de l'horloge */
+.clock {
     width: 100px;
     height: 80px;
     background: rgba(86, 81, 83, 0.095);
@@ -24,7 +25,7 @@
     align-items: center;
     border-radius: 10px;
     position: absolute;
-    z-index: 8; /* Valeur plus élevée pour être au premier plan */
+    z-index: 8;
     justify-content: center;
     backdrop-filter: blur(50px);
     left: 20px; /* Ajustez la position par rapport à gauche */
@@ -32,34 +33,37 @@
     
 }
 
-.clock span{
-    font-size:13px;
-    width : 10px;
-    display : inline-block;
+/* Style des parties textuelles de l'horloge */
+.clock span {
+    font-size: 13px;
+    width: 10px;
+    display: inline-block;
     text-align: center;
     position: relative;
-} 
+}
 
-.clock span::after{
+/* Style des parties additionnelles de l'horloge */
+.clock span::after {
     font-size: 5px;
     position: absolute;
     bottom: -15px;
     left: 50%;
-    transform : translateX(-50%);
+    transform: translateX(-50%);
 }
 
-#hrs::after{
+#hrs::after {
     content: 'HOURS';
 }
 
-#min::after{
+#min::after {
     content: 'MINS';
 }
 
-#sec::after{
+#sec::after {
     content: 'SEC';
 }
 
+/* Style du calendrier */
 .calendar {
     width: 150px;
     height: 100px;
@@ -68,14 +72,15 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
-    z-index: 9; /* Valeur plus élevée pour être au premier plan */
+    z-index: 9;
     position: absolute;
     backdrop-filter: blur(50px);
-    left: 20px; /* Ajustez la position par rapport à gauche */
-    top: 100px; /* Ajustez la position par rapport au haut */
+    left: 20px;
+    top: 100px;
 }
 
-.left, .right{
+/* Style des parties gauche et droite du calendrier */
+.left, .right {
     width: 50%;
     height: 100%;
     display: flex;
@@ -85,7 +90,8 @@
     font-size: 13px;
 }
 
-.right{
+/* Style de la partie droite du calendrier */
+.right {
     width: 50%;
     background: rgba(5, 5, 5, 0.356);
     color: #ffffff;
@@ -93,22 +99,25 @@
     border-bottom-right-radius: 10px;
 }
 
-.left{
+/* Style de la partie gauche du calendrier */
+.left {
     width: 50%;
 }
-.container h1{
+
+/* Style du titre principal */
+.container h1 {
     position: absolute;
     top: 50%;
-    left: 50%; 
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #fff;
     font-size: 90px;
     font-weight: 600;
     letter-spacing: 3px;
 }
 
-
-.quotes{
+/* Style des citations */
+.quotes {
     width: 100%;
     position: absolute;
     text-align: right;
@@ -120,56 +129,66 @@
     
 }
 
-.quotes h2{
+.quotes h1 {
     font-size: 12px;
     margin-top: 10px;
     font-weight: 100;
-    font-style : italic;
+    font-style: italic;
+}
+
+.quotes h2 {
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 100;
 }
 
 /* Style de la barre de recherche */
 #search {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    bottom: 20px;
+    position: fixed;
+    text-align: left;
+    left: 20px;
     width: 80%; /* Largeur ajustée */
     max-width: 400px; /* Largeur maximale */
     z-index: 10; /* Valeur plus élevée pour être au premier plan */
     
 }
 
+/* Style de l'input texte de la barre de recherche */
 input[type="text"] {
-    width: calc(50%); /* Largeur ajustée pour l'input */
+    width: calc(50%);
     padding: 8px;
     background-color: rgba(69, 57, 57, 0.473);
     border: 1px solid #ccc;
     border-radius: 3px;
     outline: none;
-    font-size: 14px; /* Taille de police réduite */
+    font-size: 14px;
 }
 
+/* Style de l'input texte de la barre de recherche lorsqu'il est focus */
 input[type="text"]:focus {
-    border-color: #7f7a7f; /* Couleur lorsque l'input est focus */
+    border-color: #7f7a7f;
 }
 
+/* Style du bouton de la barre de recherche */
 input[type="submit"] {
     background-color: #252323;
     color: white;
     border: none;
-    padding: 8px 12px; /* Taille du bouton ajustée */
+    padding: 8px 12px;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 14px; /* Taille de police réduite */
-    margin-left: 6px; /* Ajustement pour l'espacement entre l'input et le bouton */
+    font-size: 14px;
+    margin-left: 6px;
 }
 
+/* Style du bouton de la barre de recherche au survol */
 input[type="submit"]:hover {
-    background-color: #00000071; /* Couleur au survol */
+    background-color: #00000071;
 }
 
-.inline-form{
+/* Style d'une forme en ligne */
+.inline-form {
     display: inline-block;
 }
 
@@ -200,4 +219,105 @@ figure {
 
 audio {
     width: 275%;
+}
+
+/* Météo */
+
+
+.card {
+    width: 90%;
+    max-width: 235px;
+    background: linear-gradient(135deg, #00febabc, #5b548a);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+    top: 50px;
+    right: 20px;
+    position: fixed;
+
+}
+
+/* Style de la zone de recherche de la carte météo */
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style de l'input de recherche de la carte météo */
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 5px 13px;
+    height: 15px;
+    border-radius: 15px;
+    flex: 1;
+    margin-right: 8px;
+    font-size: 9px;
+}
+
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.search button img{
+    width: 8px;       
+}
+
+.weather-icon{
+    width: 85px;
+    margin-top: 15px;
+}
+
+.weather h1{
+    font-size: 40px;
+    font-weight: 100px;
+    margin-top: -5px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 25px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img{
+    width: 20px;
+    margin-right: 5px;
+
+}
+
+.humidity, .wind{
+    font-size: 14px;
+    margin-top: -3px;
+}
+
+.weather{
+    display: none;
+}
+
+.error{
+    text-align: left;
+    margin-left: 5px;
+    font-size: 7px;
+    margin-top: 5px;
+    display: none;
 }

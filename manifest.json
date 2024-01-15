@@ -19,7 +19,7 @@
       "default_icon":"ghibli_icon16.png"
     }, 
     "permissions" : [
-      "storage"
+      "storage","geolocation"
     ]   
   }
 
