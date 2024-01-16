@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ghibli Extension</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" tyoe="text/css" href="styles.css">
 
     </head>
     <body>
@@ -25,16 +25,18 @@
 
     <!--Musique-->
 
-        <figure>
-            <audio controls><source src="/musiques/Joe Hisaishi  Studio Ghibli Experience, Part 1.mp3" type="audio/mp3">
-            Votre navigateur ne prends pas en charge l'élément audio."></audio>
-            <a href="/musiques/Joe Hisaishi  Studio Ghibli Experience, Part 1.mp3"> Download audio </a>
-        </figure>
+    <figure>
+        <!-- <button id="playButton">Playlist Musique Joe Hisaishi (Ghibli)</button> -->
+        <audio id="audioPlayer" controls style="display:none">
+            <source src="/musiques/Joe Hisaishi  Studio Ghibli Experience, Part 1.mp3" type="audio/mp3">
+            Votre navigateur ne prend pas en charge l'élément audio.
+        </audio>
+    </figure>
+    <img src="logoPlay.png" id="playButton" alt="Lire l'audio">
 
-    <!--Bouton background
+    <!--Bouton background-->
 
         <button id="changeBackground">Change the Background</button>
-    -->
     
     <!--Recherche Google-->
 

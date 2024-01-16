@@ -69,6 +69,8 @@ const dataMoviesImages = [
   
     card.appendChild(h1);
     card.appendChild(p);
+
+    console.log("card check");
   
     return card;
   }
@@ -80,9 +82,32 @@ const dataMoviesImages = [
   }
   
   fetchData();
+  
+  function removeCard() {
+    var previousCard = document.getElementById("card"); // Remplacez "cardId" par l'identifiant de votre carte
+    if (previousCard) {
+      console.log("card delete");
+      previousCard.remove();
+    }
+  }
+  
+  document.getElementById("changeBackground").addEventListener("click", function() {
+    removeCard();
+    console.log("test1");
+    fetchData(); // Vous pouvez appeler fetchData après avoir supprimé la carte précédente
+    console.log("test2");
+  });
+  
+  // document.getElementById("changeBackground").addEventListener("click", fetchData);
 
+//Bouton lecteur Audio
 
-// document.getElementById("changeBackground").addEventListener("click", changeimg);
+document.getElementById('playButton').addEventListener('click', function() {
+  var audioPlayer = document.getElementById('audioPlayer');
+  audioPlayer.style.display = 'block';
+  document.getElementById('playButton').style.display = 'none';
+  audioPlayer.play();
+});
 
 //Automatisation Date
 
