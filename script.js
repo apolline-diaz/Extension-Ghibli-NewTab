@@ -81,50 +81,8 @@ const dataMoviesImages = [
   
   fetchData();
 
-/*
 
-// Actualisation fond d'écran et cadran synopsis
-let nombrePrecedent = null;
-let nouveauNombre = null;
-
-function changeimg() {
-
-    const images = [
-        "chihiro008.jpg",
-        "ged014.jpg",
-        "karigurashi018.jpg",
-        "kokurikozaka049.jpg",
-        "ponyo032.jpg",
-        "kaze1.jpg",
-        "mononoke010.jpg",
-        "mononoke023.jpg",
-        "nausicaa002.jpg",
-        "nausicaa046.jpg",
-        "tanuki010.jpg",
-        "tanuki028.jpg",
-        "tanuki035.jpg",
-        "totoro024.jpg",
-        "totoro025.jpg",
-        "totoro037.jpg"
-    ];
-
-    do  {
-        nouveauNombre = Math.floor(Math.random() * images.length);
-        } while (nouveauNombre === nombrePrecedent);
-        
-        console.log(nombrePrecedent);
-        console.log(nouveauNombre);
-        
-        nombrePrecedent = nouveauNombre;
-        
-        // const randomIndex = Math.floor(Math.random() * images.length);    
-        document.getElementById("container").style.backgroundImage = `url('images/${images[nouveauNombre]}')`;
-
-    }
-
-document.addEventListener("DOMContentLoaded", changeimg);
-document.getElementById("changeBackground").addEventListener("click", changeimg);*/
-
+// document.getElementById("changeBackground").addEventListener("click", changeimg);
 
 //Automatisation Date
 
@@ -210,48 +168,3 @@ setInterval(()=>{
     })
 
     checkWeather();
-
-    // Citation et informations sur le film
-
-    /*function getData() {
-        const response = await fetch('https://ghibliapi.vercel.app/films')
-        const data = await response.json()
-      }
-
-    // Begin accessing JSON data here
-    var data = JSON.parse(this.response)
-
-    data.forEach((movie) => {
-    // Log each movie's title
-    console.log(movie.title)
-    })*/
-
-
-
-
-
-
-
-    /*const apiUrlGhibli = "https://ghibliapi.vercel.app/films" ;
-    
-    async function checkImage(titleMovie){
-        const response = await fetch(apiUrlGhibli + title}`);
- 
-        if(response.status == 404){
-            document.querySelector(".error").style.display="block";
-            document.querySelector(".weather").style.display="none";
-        }else{
-
-            var data = await response.json();
-        }
-    }
-
- 
-
-    document.querySelector(".title").innerHTML = data.name;
-    document.querySelector(".release_date").innerHTML = data.release_date;
-
-
-    if(data.title[0].main == "My Neighbor Totoro"){
-        weatherIcon.src = "images/totoro.png";         
-    }*/
