@@ -81,8 +81,6 @@ const dataMoviesImages = [
   
   fetchData();
 
-  document.getElementById("changeBackground").addEventListener("click", changeMovie);
-
 /*
 
 // Actualisation fond d'écran et cadran synopsis
