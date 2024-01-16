@@ -1,4 +1,91 @@
-// Actualisation fond d'écran
+// Actualisation fond d'écran et cadran synopsis
+
+const dataMoviesImages = [
+    { title : "Castle in the Sky", image : "images/laputa036.jpg" },
+    { title : "Grave of the Fireflies", image : "images/thumbravefi.jpeg" },
+    { title : "My Neighbor Totoro", image : "images/totoro025.jpg" },
+    { title : "Kiki\'s Delivery Service", image : "images/majo002.jpg" },
+    { title : "Only Yesterday", image : "images/omoide026.jpg" },
+    { title : "Porco Rosso", image : "images/porco007.jpg" },
+    { title : "Pom Poko", image : "images/tanuki035.jpg" },
+    { title : "Whisper of the Heart", image : "images/mimi033.jpg" },
+    { title : "Princess Mononoke", image : "images/mononoke010.jpg" },
+    { title : "My Neighbors the Yamadas", image : "images/yamada004.jpg" },
+    { title : "Spirited Away", image : "images/chiriro008.jpg" },
+    { title : "The Cat Returns", image : "images/baron022.jpg" },
+    { title : "Howl\'s Moving Castle", image : "images/howl011.jpg" },
+    { title : "Tales from Earthsea", image : "images/ged020.jpg" },
+    { title : "Ponyo", image : "images/ponyo038.jpg" },
+    { title : "Arrietty", image : "images/karigurashi001.jpg" },
+    { title : "From Up on Poppy Hill", image : "images/kokurikozaka049.jpg" },
+    { title : "The Wind Rises", image : "images/kaze1.jpg" },
+    { title : "The Tale of the Princess Kaguya", image : "images/kaguyahime004.jpg" },
+    { title : "When Marnie Was There", image : "images/marnie021.jpg" },
+    { title : "The Red Turtle", image : "images/redturtle021.jpg" },
+    { title : "Earwig and the Witch", image : "images/aya003.jpg" },
+  ];
+
+  const app = document.getElementById('movieDatas');
+
+  async function fetchData() {
+    try {
+      const response = await fetch('https://ghibliapi.vercel.app/films');
+      const data = await response.json();
+  
+      if (response.ok) {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        const randomMovie = data[randomIndex];
+        const matchingImage = dataMoviesImages.find(movie => movie.title === randomMovie.title);
+  
+        if (matchingImage) {
+          const card = createCard(randomMovie);
+          app.appendChild(card);
+          document.body.style.backgroundImage = `url(${matchingImage.image})`;
+        } else {
+          throw new Error('Matching image not found for title:', randomMovie.title);
+        }
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    } catch (error) {
+      showError('Gah, it\'s not working!');
+      console.error(error.message);
+    }
+  }
+  
+  function createCard(movie) {
+    const card = document.createElement('div');
+    card.setAttribute('class', 'box');
+  
+    const h1 = document.createElement('h1');
+    h1.textContent = movie.title;
+  
+    const p = document.createElement('p');
+    p.textContent = `${movie.description}...`;
+  
+    h1.addEventListener('click', function () {
+      p.style.display = (p.style.display === 'none') ? 'block' : 'none';
+    });
+  
+    card.appendChild(h1);
+    card.appendChild(p);
+  
+    return card;
+  }
+  
+  function showError(message) {
+    const errorMessage = document.createElement('marque');
+    errorMessage.textContent = message;
+    app.appendChild(errorMessage);
+  }
+  
+  fetchData();
+
+  document.getElementById("changeBackground").addEventListener("click", changeMovie);
+
+/*
+
+// Actualisation fond d'écran et cadran synopsis
 let nombrePrecedent = null;
 let nouveauNombre = null;
 
@@ -23,8 +110,6 @@ function changeimg() {
         "totoro037.jpg"
     ];
 
-    
-
     do  {
         nouveauNombre = Math.floor(Math.random() * images.length);
         } while (nouveauNombre === nombrePrecedent);
@@ -40,7 +125,8 @@ function changeimg() {
     }
 
 document.addEventListener("DOMContentLoaded", changeimg);
-document.getElementById("changeBackground").addEventListener("click", changeimg);
+document.getElementById("changeBackground").addEventListener("click", changeimg);*/
+
 
 //Automatisation Date
 
@@ -126,3 +212,48 @@ setInterval(()=>{
     })
 
     checkWeather();
+
+    // Citation et informations sur le film
+
+    /*function getData() {
+        const response = await fetch('https://ghibliapi.vercel.app/films')
+        const data = await response.json()
+      }
+
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response)
+
+    data.forEach((movie) => {
+    // Log each movie's title
+    console.log(movie.title)
+    })*/
+
+
+
+
+
+
+
+    /*const apiUrlGhibli = "https://ghibliapi.vercel.app/films" ;
+    
+    async function checkImage(titleMovie){
+        const response = await fetch(apiUrlGhibli + title}`);
+ 
+        if(response.status == 404){
+            document.querySelector(".error").style.display="block";
+            document.querySelector(".weather").style.display="none";
+        }else{
+
+            var data = await response.json();
+        }
+    }
+
+ 
+
+    document.querySelector(".title").innerHTML = data.name;
+    document.querySelector(".release_date").innerHTML = data.release_date;
+
+
+    if(data.title[0].main == "My Neighbor Totoro"){
+        weatherIcon.src = "images/totoro.png";         
+    }*/
