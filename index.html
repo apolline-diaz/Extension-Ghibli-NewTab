@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
+        
         <meta charset="UTF-8">
+        
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>Ghibli Extension</title>
-        <link rel="stylesheet" tyoe="text/css" href="styles.css">
+
+        <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
 
     </head>
+    
     <body>
 
     <!--Fond d'écran-->
@@ -20,23 +28,23 @@
     <!--Données des films-->
 
         <div id="movieDatas">
-            <div class="infos"></div>
         </div>
 
-    <!--Musique-->
+     <!--Musique-->
 
-    <figure>
+     <figure>
         <!-- <button id="playButton">Playlist Musique Joe Hisaishi (Ghibli)</button> -->
         <audio id="audioPlayer" controls style="display:none">
             <source src="/musiques/Joe Hisaishi  Studio Ghibli Experience, Part 1.mp3" type="audio/mp3">
             Votre navigateur ne prend pas en charge l'élément audio.
         </audio>
     </figure>
-    <img src="logoPlay.png" id="playButton" alt="Lire l'audio">
+    <img src="images/logoPlay.png" id="playButton" alt="Lire l'audio">
 
     <!--Bouton background-->
 
-        <button id="changeBackground">Change the Background</button>
+        <button id="changeBackground"> Load </button>
+    
     
     <!--Recherche Google-->
 
@@ -48,7 +56,7 @@
         </form>
     </div>
 
-    <!--Fuseau horaire-->
+    <!--Horloge-->
         
     <div class="clock">
         <span id="hrs">00</span>
@@ -62,11 +70,11 @@
     
     <div class="calendar">
         <div class="left">
-        <p id="date">01</p>
-        <p id="day">Sunday</p>
+        <p id="date">01 January</p>
+        <!-- <p id="day">Sunday</p> -->
     </div>
         <div class="right">
-            <p id="month">January</p>
+            <!-- <p id="month">January</p> -->
             <p id="year">2024</p>
         </div>
     </div>
@@ -75,7 +83,7 @@
 
     <div class="card">
         <div class="search">
-            <input type="text" placeholder="enter city name" spellcheck="false">
+            <input type="text" placeholder="Where is it sunny today ?" spellcheck="false">
             <button><img src="images/search.png"></button>
     
         </div>
@@ -87,24 +95,36 @@
             <img src="images/rain.png" class="weather-icon">
             <h1 class="temp">22°c</h1>
             <h2 class="city">New York</h2>
-            <div class="details">
-            <div class="col">
-                <img src="images/humidity.png">
-                    <div>
-                        <p class="humidity">50%</p>
-                        <p>Humidity</p>
-                    </div>
+            <!-- <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
                 </div>
                 <div class="col">
                     <img src="images/wind.png">
-                    <div>
-                        <p class="wind">15 km/h</p>
-                        <p>Wind Speed</p>
-                    </div>
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
+
+   <!--To Do App -->
+
+   <div class="todo-app"> 
+    <div class="row">
+        <input type="text" id="input-box" placeholder="Add your task">
+        <button id="myBtn"> Add</button>
+    </div>
+    <ul id="list-container">
+    </ul>
+
+</div>
 
     <script src="script.js"></script>
 
