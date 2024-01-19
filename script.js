@@ -221,8 +221,6 @@ async function handleWeatherResponse(response) {
 
 document.querySelector(".city").innerHTML = data.name;
 document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
-// document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-// document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
 if(data.weather[0].main == "Clouds"){
     weatherIcon.src = "images/clouds.png";         
@@ -257,7 +255,7 @@ checkWeatherByCity(searchBox.value);
 })
 
 
-// To do list
+// To Do list
 
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
@@ -281,7 +279,6 @@ function addTask() {
 
 const element = document.getElementById("myBtn");
 element.addEventListener("click", addTask);
-
 
 listContainer.addEventListener ("click", function (e) {
     if (e.target.tagName === "LI") {
@@ -326,3 +323,11 @@ document.addEventListener('DOMContentLoaded', function () {
       playButton.style.display = 'block';
   });
 });
+
+
+// // Event listener pour la touche 'Entrer' pour la Todo List
+// document.addEventListener('keydown', (event) => {
+//   if (event.key === 'Enter') {
+//       addTask();
+//   }
+// });

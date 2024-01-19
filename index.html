@@ -11,7 +11,6 @@
         
         <title>Ghibli Extension</title>
 
-        <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
         <link rel="stylesheet" href="styles.css">
 
     </head>
@@ -33,7 +32,8 @@
      <!--Musique-->
 
      <figure>
-        <!-- <button id="playButton">Playlist Musique Joe Hisaishi (Ghibli)</button> -->
+
+    <!-- <button id="playButton">Playlist Musique Joe Hisaishi (Ghibli)</button> -->
         <audio id="audioPlayer" controls style="display:none">
             <source src="/musiques/Joe Hisaishi  Studio Ghibli Experience, Part 1.mp3" type="audio/mp3">
             Votre navigateur ne prend pas en charge l'élément audio.
@@ -43,7 +43,7 @@
 
     <!--Bouton background-->
 
-        <button id="changeBackground"> Load </button>
+        <button id="changeBackground"> Reload </button>
     
     
     <!--Recherche Google-->
@@ -71,7 +71,6 @@
     <div class="calendar">
         <div class="left">
         <p id="date">01 January</p>
-        <!-- <p id="day">Sunday</p> -->
     </div>
         <div class="right">
             <!-- <p id="month">January</p> -->
@@ -95,28 +94,12 @@
             <img src="images/rain.png" class="weather-icon">
             <h1 class="temp">22°c</h1>
             <h2 class="city">New York</h2>
-            <!-- <div class="details">
-                <div class="col">
-                    <img src="images/humidity.png">
-                        <div>
-                            <p class="humidity">50%</p>
-                            <p>Humidity</p>
-                        </div>
-                </div>
-                <div class="col">
-                    <img src="images/wind.png">
-                        <div>
-                            <p class="wind">15 km/h</p>
-                            <p>Wind Speed</p>
-                        </div>
-                </div>
-            </div> -->
         </div>
     </div>
 
    <!--To Do App -->
 
-   <div class="todo-app"> 
+    <div class="todo-app"> 
     <div class="row">
         <input type="text" id="input-box" placeholder="Add your task">
         <button id="myBtn"> Add</button>
