@@ -1,6 +1,6 @@
 // Actualisation fond d'écran et cadran synopsis
 
-const dataMoviesImages = [
+const DATA_MOVIES_IMAGES = [
   { title: "Castle in the Sky", image: "images/laputa036.jpg" },
   { title: "Grave of the Fireflies", image: "images/thumbravefi.jpeg" },
   { title: "My Neighbor Totoro", image: "images/totoro025.jpg" },
@@ -30,13 +30,30 @@ const dataMoviesImages = [
 
 let previousNumber = null;
 let randomIndex = null;
+let response = null
+let data = null
+let currentCard = null;
 
 const app = document.getElementById("movieDatas");
+fetchAndPopulateLocalStorageWithMovies()
+
+function fetchAndPopulateLocalStorageWithMovies() {
+  return fetch("https://ghibliapi.vercel.app/films").then(resp => resp.json()).then((data) => {
+    localStorage.setItem("movies", JSON.stringify(data));
+  });
+}
 
 async function fetchData() {
   try {
-    const response = await fetch("https://ghibliapi.vercel.app/films");
-    const data = await response.json();
+      if (!localStorage.getItem("movies")) {
+          await fetchAndPopulateLocalStorageWithMovies();
+      }
+
+      const resp = localStorage.getItem("movies");
+      data = JSON.parse(resp);
+
+      response = response || await fetch("https://ghibliapi.vercel.app/films");
+      data = data || await response.json();
 
     if (response.ok) {
       do {
@@ -46,7 +63,7 @@ async function fetchData() {
       previousNumber = randomIndex;
 
       const randomMovie = data[randomIndex];
-      const matchingImage = dataMoviesImages.find(
+      const matchingImage = DATA_MOVIES_IMAGES.find(
         (movie) => movie.title === randomMovie.title
       );
 
@@ -65,9 +82,9 @@ async function fetchData() {
       throw new Error("Network response was not ok.");
     }
   } catch (error) {
-    showError("Gah, it's not working!");
-    console.error(error.message);
-  }
+    showError(`Gah, it's not working! ${error.message}`);
+    console.error(error);
+}
 }
 
 function createCard(movie) {
@@ -354,3 +371,4 @@ document.addEventListener("DOMContentLoaded", function () {
 //       addTask();
 //   }
 // });
+
