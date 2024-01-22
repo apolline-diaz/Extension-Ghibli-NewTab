@@ -112,6 +112,7 @@ function createCard(movie) {
 
   h1.addEventListener("click", function () {
     p.style.display = p.style.display === "none" ? "block" : "none";
+    h1.style.paddingRight = "75px";
   });
 
   card.appendChild(h1);
