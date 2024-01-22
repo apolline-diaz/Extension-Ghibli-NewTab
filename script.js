@@ -366,10 +366,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// // Event listener pour la touche 'Entrer' pour la Todo List
-// document.addEventListener('keydown', (event) => {
-//   if (event.key === 'Enter') {
-//       addTask();
-//   }
-// });
+// Event listener pour la touche 'Entrer'
+document.addEventListener('keydown', (event) => {
+  if (inputBox.value && event.key=== 'Enter') {
+      addTask();
+  }
+}); 
 
+// Event listener pour la touche 'Entrer'
+document.addEventListener('keydown', (event) => {
+  if (searchBox.value && event.key=== 'Enter') {
+      checkWeatherByCity(searchBox.value);
+  }
+});
