@@ -15,7 +15,7 @@
 
     "action": {
       "default_title" : "Ghilbi New Tab",
-      "default_popup": "popup.html",
+      "default_popup": "popup/popup.html",
       "default_icon":"images/ghibli_icon_16.png"
     }, 
     "permissions" : [
