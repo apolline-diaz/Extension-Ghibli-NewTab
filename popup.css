@@ -1,0 +1,33 @@
+
+
+body {
+    width: 270px;  
+    height : auto;
+    margin-left : 10px;  
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background : rgb(222, 181, 237); 
+    color : whitesmoke; 
+    }
+    
+    h1 {
+        font-size : 16px; 
+        white-space : nowrap; 
+        text-align: center;
+    }
+    
+    
+    #magical {
+    margin-right : 0px;
+    font-size : 12px;
+    text-align: center;
+    white-space: nowrap;
+    }
+    
+    #species {
+        position : absolute;
+        top :50px; 
+        left : 0; 
+        width: 100px;
+        height: auto;
+    }

@@ -6,10 +6,9 @@
 }
 
 @font-face {
-  font-family: "lemonmilk";
-  src: url(lemon-milk.otf);
-  font-weight: light;
-}
+  font-family: "LemonMilk";
+  src: url("lemon-milk/LEMONMILK-Light.otf") format("opentype");
+  }
 
 /* Style du conteneur principal */
 
@@ -39,25 +38,21 @@ body {
   font-size: 1.2rem;
   text-align: center;
   align-items: center;
+  font-family: 'LemonMilk', sans-serif;
   padding: 3%;
   background: linear-gradient(135deg, #fa84f866 50%, #bd84ff6f 100%);
   backdrop-filter: blur(10px);
   font-size: 1em;
   letter-spacing: 0.1em;
   color: rgb(255, 255, 255);
-  font-family: "Lemon Milk", sans-serif;
   font-weight: bold;
   cursor: pointer;
 }
 
 #movieDatas p {
-  font-size: 10px;
+  font-size: 0.8rem;
   padding: 4%;
   cursor: pointer;
-  font-size: 0.7rem;
-  font-family: "Lemon Milk", sans-serif;
-  font-weight: light;
-  letter-spacing: 0.1rem;
 }
 
 .search-button {
@@ -90,6 +85,7 @@ body {
   z-index: 2;
   font-size: 1.5em;
   font-weight: 50px;
+  font-family: 'LemonMilk', sans-serif;
   justify-content: right;
   right: 2%;
   padding: 0 1% 0;
