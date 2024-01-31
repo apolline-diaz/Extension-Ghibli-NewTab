@@ -33,7 +33,7 @@ Si vous êtes curieux.se, vous pouvez obtenir plus de détails sur le film en cl
 - Informations techniques sur les films (titre et synopsis) et redirection vers les résultats Google associés au titre
 - Date
 - Heure
-- Météo avec géolocalisation et barre de recherche pour savoir s'il fait plus beau dans une autre ville
+- Météo avec géolocalisation et barre de recherche 
 - Curseur personnalisé
 - To Do List
 - Lecteur de playlist de bandes originales
