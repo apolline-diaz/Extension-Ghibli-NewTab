@@ -1,4 +1,4 @@
-# Ghibli New Tab
+# Ghibli - New Tab
 
 L'extension Ghibli New Tab remplace votre nouvel onglet par une page personnalisée autour de l'univers des films du Studio Ghibli.
 
